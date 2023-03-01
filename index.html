@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/toast/toast.css" />
+    <link rel="stylesheet" href="./src/guard/guard.css" />
+    <link rel="stylesheet" href="./src/loader/loader.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="box">
+        <h3>PASSWORD GENERATOR</h3>
+        <div class="loginRegisterWrapper">
+          <div>
+            <div class="savebtn">
+              <a href="login.html">
+                Login
+              </a>
+            </div>
+            <div class="savebtn">
+              <a href="register.html">Register</a>
+            </div>
+          </div>
+          <div>
+            <div id="aboutButton">
+              About
+            </div>
+            <div id="manualButton">
+              Manual
+            </div>
+          </div>
+        </div>
+
+        <div class="passwordWrapper">
+          <input type="text" name="password" id="password" readonly />
+          <div class="savebtn" id="savebtn">
+            Save
+          </div>
+          <div class="btn2" id="copyBtn">
+            Copy
+          </div>
+        </div>
+
+        <div class="passwordParams">
+          <div>
+            <span>Password Length</span>
+            <input
+              type="number"
+              name="passLength"
+              id="passLength"
+              min="8"
+              max="16"
+            />
+          </div>
+          <div>
+            <span>Uppercase</span>
+            <input type="checkbox" name="passUppercase" id="passUppercase" />
+          </div>
+          <div>
+            <span>Lowercase</span
+            ><input type="checkbox" name="passLowercase" id="passLowercase" />
+          </div>
+          <div>
+            <span>No special characters</span
+            ><input
+              type="checkbox"
+              name="passSpecialChar"
+              id="passSpecialChar"
+            />
+          </div>
+          <div>
+            <span>No numbers</span
+            ><input type="checkbox" name="passNoNumbers" id="passNoNumbers" />
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <div class="btn1" id="generateButton">
+            Generate
+          </div>
+        </div>
+        <h3>List of passwords</h3>
+        <div class="searchWrapper">
+          <input type="search" name="search" id="searchInput" /><span
+            id="resultSearch"
+          ></span>
+          <div class="btn2" id="sort">
+            Sort &uarr;&darr;
+          </div>
+        </div>
+        <div id="listWrapper">
+          <ul class="list" id="list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+    <script src="src/toast/toast.js"></script>
+    <script src="src/loader/loader.js"></script>
+  </body>
+</html>
